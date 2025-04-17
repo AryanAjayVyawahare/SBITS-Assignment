@@ -82,6 +82,7 @@ exports.updatecontact = async ( req, res)=>{
             name:body.name,
             phone:body.phone,
             email:body.email,
+            date:body.date,
             description:body.description
         })
         return res.status(200).json(contact)

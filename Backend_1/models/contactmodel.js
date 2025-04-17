@@ -24,7 +24,10 @@ const contactSchema = new mongoose.Schema({
         validate: [validator.isEmail, 'Please enter a valid email'],
         unique:[true, 'please enter unique email id']
     },
-   
+      date:{
+        type:Date,
+        default:Date.now()
+    },
     description:{      
         type:String,
         required:true
