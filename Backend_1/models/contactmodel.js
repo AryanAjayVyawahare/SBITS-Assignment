@@ -24,10 +24,7 @@ const contactSchema = new mongoose.Schema({
         validate: [validator.isEmail, 'Please enter a valid email'],
         unique:[true, 'please enter unique email id']
     },
-    // rollno:{
-    //     type: String,
-    //    // required: [true, 'Please enter the roll number']
-    // },
+   
     description:{      
         type:String,
         required:true

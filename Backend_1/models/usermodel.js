@@ -40,6 +40,7 @@ const userSchema = new mongoose.Schema({
             message: 'Password and confirmpassword is not matching'
         }
     }
+
 });
 
 userSchema.pre("save", async function(next){
