@@ -36,15 +36,14 @@ const verifyToken = async (req, res, next) => {
     }
 };
 
-const verifyRole = (allowedRoles) => {
-    return (req, res, next) => {
-        console.log("req.user.roles",req.user.roles);
+// const verifyRole = (allowedRoles) => {
+//     return (req, res, next) => {
+//         console.log("req.user.roles",req.user.roles);
         
-        if (!req.user || !req.user.roles  || !req.user.roles.some(role => allowedRoles.includes(role))) {
-            return res.status(403).json({ message: 'Access denied: Insufficient permissions' });
-        }
-        next();
-    };
-};
-
-module.exports={verifyToken,verifyRole};
+//         if (!req.user || !req.user.roles  || !req.user.roles.some(role => allowedRoles.includes(role))) {
+//             return res.status(403).json({ message: 'Access denied: Insufficient permissions' });
+//         }
+//         next();
+//     };
+// };
+module.exports={verifyToken};
